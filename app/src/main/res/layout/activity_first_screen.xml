@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/primary"
     android:orientation="vertical"
-    tools:context="firstscreen.FirstScreenActivity">
+    tools:context=".ui.firstscreen.FirstScreenActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="410dp"

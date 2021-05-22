@@ -1,4 +1,4 @@
-package invitelistTeacher
+package com.nusademy.nusademy.ui.invitelistTeacher
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

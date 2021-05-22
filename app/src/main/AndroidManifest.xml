@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nusademy.nusademy" >
+<manifest package="com.nusademy.nusademy"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -15,11 +15,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Nusademy" >
+        android:theme="@style/Theme.Nusademy">
+        <activity android:name=".ui.chatbot.ChatbotActivity"></activity>
+
         <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
-
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -29,8 +30,8 @@
             android:value="true" />
 
         <activity
-            android:name="school_profil2.SchoolProfil2Activity"
-            android:label="@string/title_activity_school_profil2" >
+            android:name=".ui.school_profil2.SchoolProfil2Activity"
+            android:label="@string/title_activity_school_profil2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,8 +39,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="teacher_profil.TeacherProfilActivity"
-            android:label="@string/title_activity_teacher_profil" >
+            android:name=".ui.teacher_profil.TeacherProfilActivity"
+            android:label="@string/title_activity_teacher_profil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,8 +48,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="school_profil.SchoolProfilActivity"
-            android:label="@string/title_activity_school_profil" >
+            android:name=".ui.school_profil.SchoolProfilActivity"
+            android:label="@string/title_activity_school_profil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,8 +57,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="login_option.LoginOptionActivity"
-            android:label="@string/title_activity_login_option" >
+            android:name=".ui.login_option.LoginOptionActivity"
+            android:label="@string/title_activity_login_option">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -65,8 +66,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="firstscreen.FirstScreenActivity"
-            android:label="@string/title_activity_first_screen" >
+            android:name=".ui.firstscreen.FirstScreenActivity"
+            android:label="@string/title_activity_first_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -81,7 +82,7 @@
             android:name=".ui.profile.UserProfileActivity"
             android:label="@string/title_activity_user_profile"
             android:theme="@style/Theme.Nusademy.NoActionBar" />
-        <activity android:name=".ui.splash.SplashActivity" >
+        <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="school_profil.SchoolProfilActivity">
+    tools:context=".ui.school_profil.SchoolProfilActivity">
 
     <ImageView
         android:id="@+id/background"
@@ -21,8 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="56dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="69dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="150dp"
@@ -41,26 +41,26 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/name_school_profil"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="@string/name_school_profil"
-            android:textColor="@color/black"
             android:layout_width="193dp"
-            android:layout_height="22dp" />
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="@string/name_school_profil"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/email_school_profil"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textSize="13sp"
-            android:text="@string/email_school_profil"
-            android:textColor="@color/black"
             android:layout_width="149dp"
-            android:layout_height="15dp" />
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="@string/email_school_profil"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/location_school_profil"
@@ -104,7 +104,6 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_changeprofil"
-            android:textAllCaps="false"
             android:layout_width="170dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -112,20 +111,21 @@
             android:cropToPadding="false"
             android:src="@drawable/shape_background"
             android:text="@string/changeprofil"
+            android:textAllCaps="false"
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_logout"
-            android:textAllCaps="false"
             android:layout_width="170dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:cropToPadding="false"
-            android:textColor="@color/primary"
             android:backgroundTint="@color/white"
+            android:cropToPadding="false"
             android:src="@drawable/shape_background"
             android:text="@string/logout"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
             android:textSize="14sp" />
 
     </LinearLayout>

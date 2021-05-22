@@ -1,14 +1,14 @@
-package school_profil2
+package com.nusademy.nusademy.ui.login_option
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.nusademy.nusademy.R
 
-class SchoolProfil2Activity : AppCompatActivity() {
+class LoginOptionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_school_profil2)
+        setContentView(R.layout.activity_login_option)
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
     }
