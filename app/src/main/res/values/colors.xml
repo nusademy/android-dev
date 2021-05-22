@@ -10,4 +10,8 @@
     <color name="primary">#40cc91</color>
     <color name="primarylight">#7affc2</color>
     <color name="primarydark">#009a63</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#02FF4A</color>
+    <color name="logoschool">#00D1FF</color>
+    <color name="brokenwhite">#D3CCCC</color>
 </resources>

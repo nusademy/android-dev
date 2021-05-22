@@ -10,4 +10,82 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_about">About Nusademy</string>
+    <string name="title_activity_apply_school">ApplySchoolActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_school_recommendation">SchoolRecommendationActivity</string>
+
+    //Apply School
+    <string name="status_apply_school">Temporary English Teacher</string>
+    <string name="title_activity_main_menu_teacher">MainMenuTeacherActivity</string>
+
+    //School Recommendation
+    <string name="name_school">SMK 1 Jakarta</string>
+    <string name="status_school">Need Temporary English Teacher</string>
+    <string name="date_school">12 Mei 2021</string>
+
+    //Main Menu Teacher
+    <string name="narrationbook_teacher">Narration Book</string>
+    <string name="passionidentifier_teacher">Passion Identifier</string>
+    <string name="schoolrecommendation_teacher">School Recommendation</string>
+    <string name="applyschool_teacher">Apply School</string>
+    <string name="invitelist_teacher">Invite List</string>
+    <string name="title_activity_recruitment">RecruitmentActivity</string>
+
+    //Recruitment
+    <string name="openrecruitment_teacher">Open Recruitment</string>
+    <string name="subject_teacher">Subject Teacher</string>
+    <string name="title_activity_search_teacher">SearchTeacherActivity</string>
+
+    //Search Teacher
+    <string name="sort_teacher">Sort</string>
+    <string name="list_teacher">List Teacher</string>
+    <string name="name_teacher">Mr John</string>
+    <string name="status_teacher">Temporary English Teacher</string>
+    <string name="date_teacher">12 Mei 2021</string>
+    <string name="title_activity_first_screen">FirstScreenActivity</string>
+
+    //First Screen
+    <string name="welcome">Welcome !</string>
+    <string name="underwelcome">One book will not make you feel the world yet</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="title_activity_login_option">LoginOptionActivity</string>
+
+    //Login_Option
+    <string name="loginasuser">Login as An User</string>
+    <string name="loginasteacher">Login as Teacher</string>
+    <string name="title_activity_school_profil">SchoolProfilActivity</string>
+
+    //School Profil
+    <string name="name_school_profil">SMK Negeri 1 Juwiring</string>
+    <string name="email_school_profil">smk1juwirng@mail.sch.id</string>
+    <string name="location_school_profil">Jl. Mrisen Nomor 667, Dusun I, Mrisen, Kecamatan Juwiring, Kabupaten Klaten, Jawa Tengah 57471</string>
+    <string name="website_school_profil">https://smkn1juwiring.sch.id/</string>
+    <string name="phone_school_profil">(0272) 551102</string>
+    <string name="emailnonres_school_profil">smknegeri1juwiring@yahoo.com</string>
+    <string name="changeprofil">Change Profile</string>
+    <string name="logout">Log Out</string>
+    <string name="title_activity_teacher_profil">TeacherProfilActivity</string>
+
+    //Teacher Profil
+    <string name="name_teacher_profil">Jhon Marsudi</string>
+    <string name="email_teacher_profil">jhon_marsudi@mail.com</string>
+    <string name="phone_teacher_profil">085636555444</string>
+    <string name="education_teacher_profil">Web Programming</string>
+    <string name="linkedin_teacher_profil">linkedin.com/jhon</string>
+    <string name="youtube_teacher_profil">youtube.com/jhon@mail.com</string>
+    <string name="domicile_teacher_profil">Jakarta</string>
+    <string name="title_activity_school_profil2">SchoolProfil2Activity</string>
+
+    //School Profil2
+    <string name="passion_identifier">Nusademy Passion Identifer</string>
+    <string name="question_ready">Are you ready to determine your passion ?</string>
+    <string name="yes_ready">Yes, I am Ready</string>
+
 </resources>

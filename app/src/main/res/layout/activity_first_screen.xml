@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    tools:context="firstscreen.FirstScreenActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="410dp"
+        android:layout_height="450dp"
+        android:layout_marginHorizontal="0dp"
+        android:background="@drawable/ic_group_89" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="35dp"
+        android:textSize="20sp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="65dp"
+        android:text="@string/welcome"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_underwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textSize="13sp"
+        android:layout_marginEnd="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginStart="65dp"
+        android:text="@string/underwelcome"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_openrecruitment"
+        android:layout_width="270dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="70dp"
+        android:layout_height="wrap_content"
+        android:cropToPadding="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/primary"
+        android:src="@drawable/shape_background"
+        android:text="@string/signin"
+        android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_openrecruitment2"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginVertical="0dp"
+        android:cropToPadding="false"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/shape_background"
+        android:text="@string/signup"
+        android:textSize="14sp" />
+
+</LinearLayout>
