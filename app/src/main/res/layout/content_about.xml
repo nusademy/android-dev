@@ -45,7 +45,7 @@
             android:layout_marginEnd="32dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:text="Nusademy's vision is to create a mobile application that provides a new way of learning for the Indonesian Young Generation to deal with low teacher quality, low reading interest, and young talents who don't know their passions.  "
+            android:text="Nusademy's vision is to create a mobile application that provides a new way of learning for the Indonesian Young Generation to deal with low teacher quality, low reading interest, and young talents who don't know their passions. "
             android:textAlignment="center"
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
