@@ -24,8 +24,7 @@
             app:srcCompat="@drawable/ic_nusademy_small" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField"
-
+            android:id="@+id/et_m_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +33,7 @@
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text"
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -42,7 +41,6 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/filledTextField2"
-
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,15 +50,15 @@
 
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text2"
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:password="true" />
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bt_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"

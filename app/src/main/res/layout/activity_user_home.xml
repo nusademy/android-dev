@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="@+id/img_me">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"

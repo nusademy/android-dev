@@ -11,6 +11,7 @@ import com.denzcoskun.imageslider.models.SlideModel
 import com.nusademy.nusademy.R
 import com.nusademy.nusademy.R.layout
 import com.nusademy.nusademy.databinding.ActivityUserHomeBinding
+import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
 
 class UserHomeActivity : AppCompatActivity() {
@@ -28,6 +29,7 @@ class UserHomeActivity : AppCompatActivity() {
             val intent = Intent(this, AboutActivity ::class.java)
             startActivity(intent)
         })
+        binding.tvFullname.text= SharedPrefManager.getInstance(this).Getuser.name
 
         Glide.with(this)
             .load(R.drawable.profile_null)
