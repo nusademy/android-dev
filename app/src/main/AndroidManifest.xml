@@ -30,6 +30,9 @@
             android:name=".ui.school_profil2.SchoolProfil2Activity"
             android:label="@string/title_activity_school_profil2" />
         <activity
+            android:name="com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity"
+            android:label="@string/title_activity_main_menu_teacher" />
+        <activity
             android:name=".ui.teacher_profil.TeacherProfilActivity"
             android:label="@string/title_activity_teacher_profil" />
         <activity
