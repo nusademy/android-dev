@@ -10,7 +10,9 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.nusademy.nusademy.R
 import com.nusademy.nusademy.databinding.ActivityMainMenuTeacherBinding
+import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
+import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
 
 class MainMenuTeacherActivity : AppCompatActivity() {
 
@@ -45,5 +47,19 @@ class MainMenuTeacherActivity : AppCompatActivity() {
 
         val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
+
+
+        binding.tvFullname.text= SharedPrefManager.getInstance(this).Getuser.name
+        binding.tvRole.text= SharedPrefManager.getInstance(this).Getuser.role
+
+        binding.linearprofile.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, TeacherProfilActivity ::class.java)
+            startActivity(intent)
+        })
+
+
     }
+
+
+
 }

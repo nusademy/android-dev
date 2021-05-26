@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.nusademy.nusademy"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
-    <!-- <uses-feature android:name="android.hardware.type.watch" /> -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -16,16 +14,7 @@
         <activity android:name=".ui.editteacher.EditTeacherActivity"></activity>
         <activity android:name=".ui.signup.SignUpActivity" />
         <activity android:name=".ui.login.LoginActivity" />
-        <activity android:name=".ui.chatbot.ChatbotActivity" /> <!-- <uses-library -->
-        <!-- android:name="com.google.android.wearable" -->
-        <!-- android:required="true" /> -->
-        <!-- &lt;!&ndash; -->
-        <!-- Set to true if your app is Standalone, that is, it does not require the handheld -->
-        <!-- app to run. -->
-        <!-- &ndash;&gt; -->
-        <!-- <meta-data -->
-        <!-- android:name="com.google.android.wearable.standalone" -->
-        <!-- android:value="true" /> -->
+        <activity android:name=".ui.chatbot.ChatbotActivity" />
         <activity
             android:name=".ui.school_profil2.SchoolProfil2Activity"
             android:label="@string/title_activity_school_profil2" />

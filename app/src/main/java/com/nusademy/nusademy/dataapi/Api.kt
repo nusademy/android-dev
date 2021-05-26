@@ -8,24 +8,33 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Header
+import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface Api {
 
-    @GET("users/{username}")
-    fun getItemUsersDetail(
-        @Path("username") username: String
-    ): Call<ItemUsersDetail>
+    // GET ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    @GET("users/{id}")
+    fun getProfileTeacher(
+        @Path("id") id: String,@Header("Authorization") token: String
+    ): Call<DataTeacher>
+
+    @GET("users/{id}")
+    fun getProfileBasicUser(
+        @Path("id") id: String,@Header("Authorization") token: String
+    ): Call<DataBasicUser>
 
 
 
 
-    @POST("search/users")
-    fun getSearchUsers(
-        @Query("q") q: String, @Header("Authorization") token: String
-    ): Call<DataLogin>
+
+
+
+
+    // POST //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     @FormUrlEncoded

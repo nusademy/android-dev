@@ -7,14 +7,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.nusademy.nusademy.R
-import com.nusademy.nusademy.dataapi.ItemUsersDetail
 import com.nusademy.nusademy.dataapi.RetrofitClient
-import com.nusademy.nusademy.dataapi.RetrofitClient2
-import com.nusademy.nusademy.dataapi.RetrofitClient3
 import com.nusademy.nusademy.databinding.ActivityLoginBinding
-import com.nusademy.nusademy.databinding.ActivityUserHomeBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
-import com.nusademy.nusademy.ui.about.AboutActivity
 import com.nusademy.nusademy.ui.home.UserHomeActivity
 import com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity
 import retrofit2.Call
@@ -40,15 +35,25 @@ class LoginActivity : AppCompatActivity() {
 
     fun loginAuth(email: String,password:String) {
 
-        RetrofitClient2.instanceUserApi.login(email,password)
+        RetrofitClient.instanceUserApi.login(email,password)
             .enqueue(object : Callback<DataLogin> {
                 override fun onResponse(
                     call: Call<DataLogin>,
                     response: Response<DataLogin>
                 ) {
+
                     if (response.code().toString()=="200"){
+                        Log.d("Login", response.body().toString())
                         SharedPrefManager.getInstance(applicationContext).setLogin(true)
-                        SharedPrefManager.getInstance(applicationContext).setUser(response.body()?.jwt.toString(),response.body()?.user?.fullName.toString(),response.body()?.user?.role?.name.toString())
+
+                        SharedPrefManager.getInstance(applicationContext).setUser(
+                            response.body()?.user?.id.toString(),
+                            response.body()?.jwt.toString(),
+                            response.body()?.user?.fullName.toString(),
+                            response.body()?.user?.role?.name.toString()
+                        )
+
+
                         if (response.body()?.user?.role?.name.toString()=="Basic User"){
                             val intent = Intent(this@LoginActivity, UserHomeActivity ::class.java)
                             startActivity(intent)

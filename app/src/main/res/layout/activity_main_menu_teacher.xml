@@ -7,64 +7,72 @@
     android:background="@color/white"
     tools:context="com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_me"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        app:civ_border_color="#FFFFFF"
-        app:civ_border_width="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/profile_null" />
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearprofile"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/img_me"
-        app:layout_constraintStart_toEndOf="@+id/img_me"
-        app:layout_constraintTop_toTopOf="@+id/img_me">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_me"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="1dp"
+            tools:src="@drawable/profile_null" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="Nama Lengkap"
-            android:textColor="@color/black" />
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:text="User"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tv_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Nama Lengkap"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="User"
+                android:textSize="12sp" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/bt_about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:text="About"
         android:textColor="@color/primary"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_me"
+        app:layout_constraintBottom_toBottomOf="@+id/linearprofile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_me" />
+        app:layout_constraintTop_toTopOf="@+id/linearprofile" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_me">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,12 +96,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="32dp"
                 android:layout_weight="1"
-                android:textSize="14sp"
-                android:text="@string/narrationbook_teacher"
                 android:adjustViewBounds="true"
                 android:cropToPadding="false"
                 android:scaleType="fitCenter"
-                android:src="@drawable/shape_background" />
+                android:src="@drawable/shape_background"
+                android:text="@string/narrationbook_teacher"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/passionidentifierButton"
@@ -102,11 +110,11 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:textSize="14sp"
-                android:text="@string/passionidentifier_teacher"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/shape_background" />
+                android:src="@drawable/shape_background"
+                android:text="@string/passionidentifier_teacher"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/schoolrecommendationButton"
@@ -116,10 +124,10 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:adjustViewBounds="true"
-                android:textSize="14sp"
-                android:text="@string/schoolrecommendation_teacher"
                 android:scaleType="fitCenter"
-                android:src="@drawable/shape_background" />
+                android:src="@drawable/shape_background"
+                android:text="@string/schoolrecommendation_teacher"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/applyschoolButton"
@@ -129,10 +137,10 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:adjustViewBounds="true"
-                android:textSize="14sp"
-                android:text="@string/applyschool_teacher"
                 android:scaleType="fitCenter"
-                android:src="@drawable/shape_background" />
+                android:src="@drawable/shape_background"
+                android:text="@string/applyschool_teacher"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/invitelistButton"
@@ -142,10 +150,10 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:adjustViewBounds="true"
-                android:textSize="14sp"
-                android:text="@string/invitelist_teacher"
                 android:scaleType="fitCenter"
-                android:src="@drawable/shape_background" />
+                android:src="@drawable/shape_background"
+                android:text="@string/invitelist_teacher"
+                android:textSize="14sp" />
         </LinearLayout>
     </ScrollView>
 
