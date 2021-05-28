@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -73,7 +74,7 @@ dependencies {
     implementation 'com.tyagiabhinav:androiddialogflowchatbot:0.1.9'
     implementation 'com.google.cloud:google-cloud-dialogflow:2.2.0'
     implementation 'io.grpc:grpc-okhttp:1.31.1'
-
+    implementation 'androidx.wear:wear:1.1.0'
 
     //testing
     testImplementation "junit:junit:$junitVersion"
@@ -83,5 +84,6 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$androidTestVersion"
     androidTestImplementation "androidx.test:rules:$androidTestVersion"
     androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
 
 }

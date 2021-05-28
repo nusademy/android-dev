@@ -16,12 +16,14 @@ import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
 
 class MainMenuTeacherActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainMenuTeacherBinding;
+    private lateinit var binding: ActivityMainMenuTeacherBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu_teacher)
+
         binding = ActivityMainMenuTeacherBinding.inflate(this.layoutInflater)
         setContentView(binding.root)
+
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
 
@@ -42,7 +44,6 @@ class MainMenuTeacherActivity : AppCompatActivity() {
         imageList.add(SlideModel(R.drawable.carousel1))
         imageList.add(SlideModel(R.drawable.carousel2))
         imageList.add(SlideModel(R.drawable.carousel3))
-
 
 
         val imageSlider = findViewById<ImageSlider>(R.id.image_slider)

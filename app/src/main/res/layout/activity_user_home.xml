@@ -20,6 +20,7 @@
         tools:src="@drawable/profile_null" />
 
     <LinearLayout
+        android:id="@+id/linearprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

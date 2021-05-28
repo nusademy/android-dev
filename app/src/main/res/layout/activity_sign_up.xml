@@ -46,7 +46,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usename/Email">
+            android:hint="Email">
 
             <!--this is the actual edit text which takes the input-->
 
@@ -63,7 +63,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Phone Number">
+            android:hint="Username">
 
             <!--this is the actual edit text which takes the input-->
 

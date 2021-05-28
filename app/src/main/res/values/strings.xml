@@ -82,10 +82,15 @@
     <string name="youtube_teacher_profil">youtube.com/jhon@mail.com</string>
     <string name="domicile_teacher_profil">Jakarta</string>
     <string name="title_activity_school_profil2">SchoolProfil2Activity</string>
+    <string name="teacher_profile">Teacher Profile</string>
+
+    //User Profil
+    <string name="user_profile">User Profile</string>
 
     //School Profil2
     <string name="passion_identifier">Nusademy Passion Identifer</string>
     <string name="question_ready">Are you ready to determine your passion ?</string>
     <string name="yes_ready">Yes, I am Ready</string>
+    <string name="title_activity_edit_user">EditUserActivity</string>
 
 </resources>

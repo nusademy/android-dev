@@ -11,6 +11,6 @@ object RetrofitClient {
     val retrofitBuilder = Retrofit.Builder().baseUrl(MAIN_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-    val instanceUserApi = retrofitBuilder.create(Api::class.java)
 
+    val instanceUserApi = retrofitBuilder.create(Api::class.java)
 }

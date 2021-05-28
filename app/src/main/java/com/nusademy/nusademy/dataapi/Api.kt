@@ -2,6 +2,7 @@ package com.nusademy.nusademy.dataapi
 
 import DataLogin
 import DataLogin.User
+import com.nusademy.nusademy.dataapi.register.RegisterPostResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -36,11 +37,20 @@ interface Api {
 
     // POST //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
     @FormUrlEncoded
     @POST("auth/local")
     fun login(
         @Field("identifier") email: String?,
         @Field("password") password: String?,
     ):Call<DataLogin>
+
+    @FormUrlEncoded
+    @POST("auth/local/register")
+    fun postRegister(
+            @Field("email") email: String,
+            @Field("fullName") fullname: String,
+            @Field("username") username: String,
+            @Field("password") password: String?
+    ): Call<RegisterPostResponse>
 }
+

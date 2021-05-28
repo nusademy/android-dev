@@ -5,12 +5,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.nusademy.nusademy.R
 import com.nusademy.nusademy.dataapi.RetrofitClient
 import com.nusademy.nusademy.databinding.ActivityLoginBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
+import com.nusademy.nusademy.ui.about.AboutActivity
 import com.nusademy.nusademy.ui.home.UserHomeActivity
+import com.nusademy.nusademy.ui.signup.SignUpActivity
 import com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,6 +28,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
+
+        binding.textView9.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, SignUpActivity ::class.java)
+            startActivity(intent)
+        })
 
         binding.btLogin.setOnClickListener {
             val email = binding.etEmail.text.toString().trim()

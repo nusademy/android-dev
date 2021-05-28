@@ -13,6 +13,8 @@ import com.nusademy.nusademy.R.layout
 import com.nusademy.nusademy.databinding.ActivityUserHomeBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
+import com.nusademy.nusademy.ui.profile.UserProfileActivity
+import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
 
 class UserHomeActivity : AppCompatActivity() {
 
@@ -29,7 +31,6 @@ class UserHomeActivity : AppCompatActivity() {
             val intent = Intent(this, AboutActivity ::class.java)
             startActivity(intent)
         })
-        binding.tvFullname.text= SharedPrefManager.getInstance(this).Getuser.name
 
         Glide.with(this)
             .load(R.drawable.profile_null)
@@ -44,12 +45,15 @@ class UserHomeActivity : AppCompatActivity() {
     imageList.add(SlideModel(R.drawable.carousel2))
     imageList.add(SlideModel(R.drawable.carousel3))
 
-
-
         val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
+
+        binding.tvFullname.text= SharedPrefManager.getInstance(this).Getuser.name
+        binding.tvRole.text= SharedPrefManager.getInstance(this).Getuser.role
+
+        binding.linearprofile.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, UserProfileActivity ::class.java)
+            startActivity(intent)
+        })
     }
-
-
-
 }
