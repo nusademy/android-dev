@@ -3,81 +3,89 @@ import com.google.gson.annotations.SerializedName
 
 
 data class DataTeacher(
-    @SerializedName("id")
-    val id: Int = 0,
-    @SerializedName("username")
-    val username: String = "",
-    @SerializedName("email")
-    val email: String = "",
-    @SerializedName("provider")
-    val provider: String = "",
-    @SerializedName("confirmed")
-    val confirmed: Boolean = false,
-    @SerializedName("blocked")
-    val blocked: Boolean = false,
-    @SerializedName("role")
-    val role: Role = Role(),
+    @SerializedName("campus")
+    val campus: String,
     @SerializedName("created_at")
-    val createdAt: String = "",
+    val createdAt: String,
+    @SerializedName("domicilie")
+    val domicilie: Domicilie,
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("ipk")
+    val ipk: Double,
+    @SerializedName("last_education")
+    val lastEducation: String,
+    @SerializedName("linkedin")
+    val linkedin: String,
+    @SerializedName("major")
+    val major: String,
+    @SerializedName("published_at")
+    val publishedAt: String,
+    @SerializedName("short_brief")
+    val shortBrief: String,
+    @SerializedName("spesialitation")
+    val spesialitation: Spesialitation,
     @SerializedName("updated_at")
-    val updatedAt: String = "",
-    @SerializedName("top_talent")
-    val topTalent: Any? = null,
+    val updatedAt: String,
+    @SerializedName("user")
+    val user: User,
+    @SerializedName("video_branding")
+    val videoBranding: Any?
+)
+
+data class Domicilie(
+    @SerializedName("created_at")
+    val createdAt: String,
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("Name")
+    val name: String,
+    @SerializedName("updated_at")
+    val updatedAt: String
+)
+
+data class Spesialitation(
+    @SerializedName("Category")
+    val category: String,
+    @SerializedName("created_at")
+    val createdAt: String,
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("Name")
+    val name: String,
+    @SerializedName("updated_at")
+    val updatedAt: String
+)
+
+data class User(
+    @SerializedName("assignToRole")
+    val assignToRole: Any?,
+    @SerializedName("blocked")
+    val blocked: Boolean,
+    @SerializedName("confirmed")
+    val confirmed: Boolean,
+    @SerializedName("created_at")
+    val createdAt: String,
+    @SerializedName("email")
+    val email: String,
     @SerializedName("full_name")
-    val fullName: String = "",
+    val fullName: String,
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("mbti_result")
+    val mbtiResult: Any?,
+    @SerializedName("provider")
+    val provider: String,
+    @SerializedName("role")
+    val role: Int,
     @SerializedName("school")
-    val school: Any? = null,
+    val school: Any?,
     @SerializedName("teacher")
-    val teacher: Teacher = Teacher(),
-    @SerializedName("narration_videos")
-    val narrationVideos: List<Any> = listOf(),
-    @SerializedName("guest_teacher_requests")
-    val guestTeacherRequests: List<Any> = listOf(),
-    @SerializedName("temporary_teacher_requests")
-    val temporaryTeacherRequests: List<Any> = listOf(),
-    @SerializedName("guest_teacher_jobs")
-    val guestTeacherJobs: List<Any> = listOf(),
-    @SerializedName("temporary_teacher_jobs")
-    val temporaryTeacherJobs: List<Any> = listOf()
-) {
-    data class Role(
-        @SerializedName("id")
-        val id: Int = 0,
-        @SerializedName("name")
-        val name: String = "",
-        @SerializedName("description")
-        val description: String = "",
-        @SerializedName("type")
-        val type: String = ""
-    )
-    data class Teacher(
-        @SerializedName("id")
-        val id: Int = 0,
-        @SerializedName("last_education")
-        val lastEducation: String = "",
-        @SerializedName("campus")
-        val campus: String = "",
-        @SerializedName("major")
-        val major: String = "",
-        @SerializedName("ipk")
-        val ipk: Double = 0.0,
-        @SerializedName("short_brief")
-        val shortBrief: String = "",
-        @SerializedName("video_branding")
-        val videoBranding: String = "",
-        @SerializedName("linkedin")
-        val linkedin: String = "",
-        @SerializedName("domicilie")
-        val domicilie: Int = 0,
-        @SerializedName("spesialitation")
-        val spesialitation: Int = 0,
-        @SerializedName("user")
-        val user: Int = 0,
-        @SerializedName("published_at")
-        val publishedAt: String = "",
-        @SerializedName("created_at")
-        val createdAt: String = "",
-        @SerializedName("updated_at")
-        val updatedAt: String = ""
-    )
-}
+    val teacher: Int,
+    @SerializedName("top_talent")
+    val topTalent: Any?,
+    @SerializedName("updated_at")
+    val updatedAt: String,
+    @SerializedName("username")
+    val username: String
+)

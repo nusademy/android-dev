@@ -33,18 +33,19 @@
             android:layout_marginBottom="50dp"
             app:srcCompat="@drawable/ic_nusademy_small" />
 
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField0"
+            android:id="@+id/filledTextField10"
 
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Nama Lengkap">
+            android:hint="Last Education">
 
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text0"
+                android:id="@+id/tv_lasteducation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -56,33 +57,65 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usename/Email">
+            android:hint="Campus">
 
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text"
+                android:id="@+id/tv_campus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField4"
+            android:id="@+id/filledTextField3"
 
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Phone Number">
+            android:layout_height="wrap_content"
+            android:hint="Major">
 
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text4"
+                android:id="@+id/tv_major"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField5"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="GPA">
+
+            <!--this is the actual edit text which takes the input-->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_ipk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField8"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Short Branding">
+
+            <!--this is the actual edit text which takes the input-->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_brief"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/filledTextField6"
@@ -95,7 +128,7 @@
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text6"
+                android:id="@+id/tv_linkedin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -107,33 +140,14 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Personal Brand">
+            android:hint="Video Branding">
 
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text7"
+                android:id="@+id/tv_videobranding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField2"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            app:passwordToggleEnabled="true">
-
-            <!--this is the actual edit text which takes the input-->
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-               />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -141,8 +155,8 @@
             android:id="@+id/bt_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
             android:text="Save Change" />
 
     </LinearLayout>

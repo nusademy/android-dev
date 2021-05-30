@@ -52,7 +52,9 @@ class UserHomeActivity : AppCompatActivity() {
         binding.tvRole.text= SharedPrefManager.getInstance(this).Getuser.role
 
         binding.linearprofile.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, UserProfileActivity ::class.java)
+
+                val intent = Intent(this, UserProfileActivity ::class.java)
+
             startActivity(intent)
         })
     }

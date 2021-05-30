@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    private const val MAIN_URL = "https://marine-cycle-311809.et.r.appspot.com/"
+    private const val MAIN_URL = "https://api.nusademy.id/"
     val retrofitBuilder = Retrofit.Builder().baseUrl(MAIN_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()

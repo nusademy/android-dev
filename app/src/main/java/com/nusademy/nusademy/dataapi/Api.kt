@@ -1,24 +1,15 @@
 package com.nusademy.nusademy.dataapi
 
 import DataLogin
-import DataLogin.User
 import com.nusademy.nusademy.dataapi.register.RegisterPostResponse
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.Headers
-import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface Api {
 
     // GET ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    @GET("users/{id}")
+    @GET("teachers/{id}")
     fun getProfileTeacher(
         @Path("id") id: String,@Header("Authorization") token: String
     ): Call<DataTeacher>
@@ -29,10 +20,39 @@ interface Api {
     ): Call<DataBasicUser>
 
 
+    // PUT ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    @FormUrlEncoded
+    @PUT("teachers/{id}")
+    fun editProfileTeachers(
+        @Path("id") id: String,
+        @Header("Authorization") token: String,
+        @Field("last_education") lastEducation: String?,
+        @Field("campus") campus: String?,
+        @Field("major") major: String?,
+        @Field("ipk") ipk: String?,
+        @Field("short_brief") brief: String?,
+        @Field("video_branding") videoBranding: String?,
+        @Field("linkedin") linkedin: String?,
+    ):Call<DataTeacher>
 
+    @FormUrlEncoded
+    @PUT("users/{id}")
+    fun editProfileUsers(
+            @Path("id") id: String,
+            @Header("Authorization") token: String,
+            @Field("full_name") fullName: String?,
+            @Field("email") email: String?,
+    ):Call<DataBasicUser>
 
-
+    @FormUrlEncoded
+    @PUT("users/{id}")
+    fun editProfileTeachers2(
+        @Path("id") id: String,
+        @Header("Authorization") token: String,
+        @Field("full_name") fullName: String?,
+        @Field("email") email: String?,
+    ):Call<DataTeacher>
 
 
     // POST //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -44,7 +64,7 @@ interface Api {
         @Field("password") password: String?,
     ):Call<DataLogin>
 
-    @FormUrlEncoded
+    /* @FormUrlEncoded
     @POST("auth/local/register")
     fun postRegister(
             @Field("email") email: String,
@@ -52,5 +72,6 @@ interface Api {
             @Field("username") username: String,
             @Field("password") password: String?
     ): Call<RegisterPostResponse>
+     */
 }
 

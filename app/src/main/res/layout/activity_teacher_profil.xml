@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="295dp"
-        app:srcCompat="@drawable/ic_group_99" />
+        android:layout_marginBottom="275dp"
+        app:srcCompat="@drawable/ic_group_118" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,66 +29,87 @@
             android:src="@drawable/ic_back"
             android:background="@drawable/ic_circle"/>
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_teacher"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/profile_null" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/name_teacher_profil"
             android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="160dp"
             android:text="@string/name_teacher_profil"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_width="193dp"
             android:layout_height="22dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/email_teacher_profil"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textSize="13sp"
+            android:layout_marginTop="7dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="160dp"
             android:text="@string/email_teacher_profil"
             android:textColor="@color/black"
             android:layout_width="149dp"
             android:layout_height="15dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/name_teacher_profil2"
+            android:id="@+id/lasteducation_teacher_profil"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="140dp"
-            android:layout_marginTop="83dp"
-            android:text="@string/name_teacher_profil"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/email_teacher_profil2"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="140dp"
+            android:layout_marginHorizontal="160dp"
             android:layout_marginTop="17dp"
-            android:text="@string/email_teacher_profil"
+            android:textStyle="bold"
+            android:text="@string/lasteducation_teacher_profil"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/phone_teacher_profil"
+            android:id="@+id/campus_teacher_profil"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="140dp"
-            android:layout_marginTop="14dp"
-            android:text="@string/phone_teacher_profil"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="160dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/campus_teacher"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/education_teacher_profil"
+            android:id="@+id/major_teacher_profil"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="140dp"
-            android:layout_marginTop="14dp"
-            android:text="@string/education_teacher_profil"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="160dp"
+            android:layout_marginTop="11dp"
+            android:text="@string/major_teacher"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ipk_teacher_profil"
+            android:layout_width="222dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="160dp"
+            android:layout_marginTop="11dp"
+            android:text="@string/ipk_teacher"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shortbrief_teacher_profil"
+            android:layout_width="222dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/shortbrief_teacher"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
@@ -96,29 +117,21 @@
             android:id="@+id/linkedin_teacher_profil"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="140dp"
-            android:layout_marginTop="14dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="24.5dp"
             android:text="@string/linkedin_teacher_profil"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/youtube_teacher_profil"
+            android:id="@+id/videobranding_teacher_profil"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="140dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/youtube_teacher_profil"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/domicile_teacher_profil"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="140dp"
-            android:layout_marginTop="17.5dp"
-            android:text="@string/domicile_teacher_profil"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/videobranding_teacher"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
@@ -135,12 +148,24 @@
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_changeprofil2"
+            android:textAllCaps="false"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:cropToPadding="false"
+            android:src="@drawable/shape_background"
+            android:text="@string/changeprofildetail"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_logout"
             android:textAllCaps="false"
             android:layout_width="170dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="5dp"
             android:cropToPadding="false"
             android:textColor="@color/primary"
             android:backgroundTint="@color/white"
@@ -152,7 +177,7 @@
 
     <ImageView
         android:id="@+id/logo_logout"
-        android:layout_marginTop="613.3dp"
+        android:layout_marginTop="702dp"
         android:layout_marginLeft="85dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

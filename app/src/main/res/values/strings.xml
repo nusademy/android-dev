@@ -75,14 +75,22 @@
 
     //Teacher Profil
     <string name="name_teacher_profil">Jhon Marsudi</string>
+    <string name="username_teacher_profil">JhonMars_</string>
     <string name="email_teacher_profil">jhon_marsudi@mail.com</string>
     <string name="phone_teacher_profil">085636555444</string>
     <string name="education_teacher_profil">Web Programming</string>
     <string name="linkedin_teacher_profil">linkedin.com/jhon</string>
-    <string name="youtube_teacher_profil">youtube.com/jhon@mail.com</string>
     <string name="domicile_teacher_profil">Jakarta</string>
     <string name="title_activity_school_profil2">SchoolProfil2Activity</string>
     <string name="teacher_profile">Teacher Profile</string>
+    <string name="lasteducation_teacher_profil">S2</string>
+    <string name="spesialitation_teacher">Web Programming</string>
+    <string name="campus_teacher">IPB</string>
+    <string name="major_teacher">Information Technology</string>
+    <string name="ipk_teacher">3.7</string>
+    <string name="shortbrief_teacher">I am a fast learner</string>
+    <string name="videobranding_teacher">youtube.com/jhon@mail.com</string>
+    <string name="changeprofildetail">Change Detail</string>
 
     //User Profil
     <string name="user_profile">User Profile</string>

@@ -22,7 +22,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class SignUpActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySignUpBinding
+    /* private lateinit var binding: ActivitySignUpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,4 +81,6 @@ class SignUpActivity : AppCompatActivity() {
             }
         })
     }
+
+     */
 }

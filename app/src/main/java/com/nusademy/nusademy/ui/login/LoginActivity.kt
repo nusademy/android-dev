@@ -56,6 +56,7 @@ class LoginActivity : AppCompatActivity() {
 
                         SharedPrefManager.getInstance(applicationContext).setUser(
                             response.body()?.user?.id.toString(),
+                            response.body()?.user?.teacher?.id.toString(),
                             response.body()?.jwt.toString(),
                             response.body()?.user?.fullName.toString(),
                             response.body()?.user?.role?.name.toString()

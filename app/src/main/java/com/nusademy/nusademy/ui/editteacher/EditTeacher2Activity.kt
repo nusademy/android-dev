@@ -7,26 +7,28 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.developer.kalert.KAlertDialog
+import com.nusademy.nusademy.R
+import com.nusademy.nusademy.dataapi.DataBasicUser
 import com.nusademy.nusademy.dataapi.DataTeacher
 import com.nusademy.nusademy.dataapi.RetrofitClient
-import com.nusademy.nusademy.databinding.ActivityEditTeacherBinding
+import com.nusademy.nusademy.databinding.ActivityEditTeacher2Binding
+import com.nusademy.nusademy.databinding.ActivityEditUserBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
-import com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class EditTeacherActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityEditTeacherBinding
+class EditTeacher2Activity : AppCompatActivity() {
+    private lateinit var binding: ActivityEditTeacher2Binding
 
     //Ambil id dan token dari SharedPreference
     private val token= SharedPrefManager.getInstance(this).Getuser.token
-    private val id= SharedPrefManager.getInstance(this).Getuser.idteacher
+    private val id= SharedPrefManager.getInstance(this).Getuser.id
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityEditTeacherBinding.inflate(layoutInflater)
+        binding = ActivityEditTeacher2Binding.inflate(this.layoutInflater)
         setContentView(binding.root)
 
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
@@ -34,28 +36,17 @@ class EditTeacherActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         if (bundle != null) {
-            binding.tvLasteducation.setText( bundle.getString("last_education",""))
-            binding.tvCampus.setText( bundle.getString("campus",""))
-            binding.tvMajor.setText( bundle.getString("major",""))
-            binding.tvIpk.setText( bundle.getString("ipk",""))
-            binding.tvBrief.setText( bundle.getString("short_brief",""))
-            binding.tvLinkedin.setText( bundle.getString("linkedin",""))
-            binding.tvVideobranding.setText( bundle.getString("video_branding",""))
+            binding.tvName.setText(bundle.getString("fullName",""))
+            binding.tvEmail.setText( bundle.getString("email",""))
         }
 
-//         Action Saat Button Save Di Klik
+        // Action Saat Button Save Di Klik
         binding.btSave.setOnClickListener(View.OnClickListener {
 
             // Memanggil Function UpdateSchool
-            UpdateTeacher(
-                binding.tvLasteducation.text.toString(),
-                binding.tvCampus.text.toString(),
-                binding.tvMajor.text.toString(),
-                binding.tvIpk.text.toString(),
-                binding.tvBrief.text.toString(),
-                binding.tvVideobranding.text.toString(),
-                binding.tvLinkedin.text.toString()
-            )
+            UpdateUsers(
+                binding.tvName.text.toString(),
+                binding.tvEmail.text.toString())
         })
 
         binding.btnback.setOnClickListener(View.OnClickListener {
@@ -66,28 +57,13 @@ class EditTeacherActivity : AppCompatActivity() {
     }
 
     //Inisiasi Fuction UpdateSchool
-    fun UpdateTeacher(
-                      lastEducation:String,
-                      campus:String,
-                      major:String,
-                      ipk:String,
-                      brief:String,
-                      videoBranding:String,
-                      linkedin:String
-
-    ) {
+    fun UpdateUsers(
+        fullName:String,
+        email:String) {
         val pDialog = KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
         pDialog.contentText = "Updated data has been saved"
         pDialog.show()
-        RetrofitClient.instanceUserApi.editProfileTeachers(
-            id,"Bearer "+token,
-            lastEducation,
-            campus,
-            major,
-            ipk,
-            brief,
-            videoBranding,
-            linkedin)
+        RetrofitClient.instanceUserApi.editProfileTeachers2(id,"Bearer "+token,fullName,email)
             .enqueue(object : Callback<DataTeacher> {
                 override fun onResponse(
                     call: Call<DataTeacher>,
@@ -108,4 +84,5 @@ class EditTeacherActivity : AppCompatActivity() {
                 }
             })
     }
+
 }

@@ -86,4 +86,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
 
+    //alert dialog
+    implementation 'com.github.TutorialsAndroid:KAlertDialog:v5.0.19'
+
 }
