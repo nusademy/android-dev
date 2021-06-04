@@ -5,10 +5,11 @@ This repository is use for android developer to collaborate with others develope
 
 ## Features
 - Login and register for users and teachers
-- edit profile users,and teachers.
+- Edit profile users,and teachers.
 - Request Teaching 
 - Reject/Approve Teaching
 - Video Naration
+- Chatbot
 
 # Installation
 The following are the installation steps both locally and in production.
