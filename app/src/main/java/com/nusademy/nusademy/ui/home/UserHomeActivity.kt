@@ -13,8 +13,8 @@ import com.nusademy.nusademy.R.layout
 import com.nusademy.nusademy.databinding.ActivityUserHomeBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
+import com.nusademy.nusademy.ui.chatbot4java.MainChatbot4Activity
 import com.nusademy.nusademy.ui.profile.UserProfileActivity
-import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
 
 class UserHomeActivity : AppCompatActivity() {
 
@@ -29,6 +29,11 @@ class UserHomeActivity : AppCompatActivity() {
 
         binding.btAbout.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, AboutActivity ::class.java)
+            startActivity(intent)
+        })
+
+        binding.imageButton2.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, MainChatbot4Activity ::class.java)
             startActivity(intent)
         })
 

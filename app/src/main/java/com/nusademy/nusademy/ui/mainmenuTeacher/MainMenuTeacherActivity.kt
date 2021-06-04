@@ -12,6 +12,7 @@ import com.nusademy.nusademy.R
 import com.nusademy.nusademy.databinding.ActivityMainMenuTeacherBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
+import com.nusademy.nusademy.ui.chatbot4java.MainChatbot4Activity
 import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
 
 class MainMenuTeacherActivity : AppCompatActivity() {
@@ -29,6 +30,11 @@ class MainMenuTeacherActivity : AppCompatActivity() {
 
         binding.btAbout.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, AboutActivity ::class.java)
+            startActivity(intent)
+        })
+
+        binding.passionidentifierButton.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, MainChatbot4Activity ::class.java)
             startActivity(intent)
         })
 
