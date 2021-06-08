@@ -70,7 +70,7 @@
     <string name="phone_school_profil">(0272) 551102</string>
     <string name="emailnonres_school_profil">smknegeri1juwiring@yahoo.com</string>
     <string name="changeprofil">Change Profile</string>
-    <string name="logout">Log Out</string>
+    <string name="logout">Log Out ></string>
     <string name="title_activity_teacher_profil">TeacherProfilActivity</string>
 
     //Teacher Profil
@@ -100,5 +100,7 @@
     <string name="question_ready">Are you ready to determine your passion ?</string>
     <string name="yes_ready">Yes, I am Ready</string>
     <string name="title_activity_edit_user">EditUserActivity</string>
+    <string name="applyguestteacher">Apply Guest Teacher</string>
+    <string name="applytempteacher">Apply Temporary Teacher</string>
 
 </resources>

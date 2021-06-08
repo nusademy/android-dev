@@ -12,7 +12,10 @@ import com.nusademy.nusademy.R
 import com.nusademy.nusademy.databinding.ActivityMainMenuTeacherBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
+import com.nusademy.nusademy.ui.applyguestteacher.GuestTeacherRequestActivity
+import com.nusademy.nusademy.ui.applytempteacher.TempTeacherRequestActivity
 import com.nusademy.nusademy.ui.chatbot4java.MainChatbot4Activity
+import com.nusademy.nusademy.ui.signup.PostProfileTeacherActivity
 import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
 
 class MainMenuTeacherActivity : AppCompatActivity() {
@@ -37,6 +40,16 @@ class MainMenuTeacherActivity : AppCompatActivity() {
             val intent = Intent(this, MainChatbot4Activity ::class.java)
             startActivity(intent)
         })
+
+        binding.btApplyGuest.setOnClickListener {
+            val intent = Intent(this, GuestTeacherRequestActivity ::class.java)
+            startActivity(intent)
+        }
+
+        binding.btApplyTemp.setOnClickListener {
+            val intent = Intent(this, TempTeacherRequestActivity ::class.java)
+            startActivity(intent)
+        }
 
         Glide.with(this)
                 .load(R.drawable.profile_null)
@@ -63,10 +76,14 @@ class MainMenuTeacherActivity : AppCompatActivity() {
             val intent = Intent(this, TeacherProfilActivity ::class.java)
             startActivity(intent)
         })
-
-
     }
 
-
+    override fun onStart() {
+        super.onStart()
+        if(SharedPrefManager.getInstance(this).Getuser.idteacher=="null"){
+            val intent = Intent(applicationContext, PostProfileTeacherActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
 }

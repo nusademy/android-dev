@@ -21,6 +21,7 @@ import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.editteacher.EditTeacherActivity
 import com.nusademy.nusademy.ui.edituser.EditUserActivity
 import com.nusademy.nusademy.ui.home.UserHomeActivity
+import com.nusademy.nusademy.ui.login.LoginActivity
 import com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity
 import kotlinx.coroutines.delay
 import retrofit2.Call
@@ -67,6 +68,12 @@ class UserProfileActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
         )
+
+        binding.btnLogout.setOnClickListener {
+            SharedPrefManager.getInstance(applicationContext).setLogin(false)
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {

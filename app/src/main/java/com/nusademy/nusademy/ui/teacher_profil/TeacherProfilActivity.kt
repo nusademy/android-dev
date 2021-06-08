@@ -87,6 +87,12 @@ class TeacherProfilActivity : AppCompatActivity() {
             val intent = Intent(this, MainMenuTeacherActivity::class.java)
             startActivity(intent)
         })
+
+        binding.btnLogout.setOnClickListener {
+            SharedPrefManager.getInstance(applicationContext).setLogin(false)
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {

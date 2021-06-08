@@ -12,8 +12,12 @@
         android:roundIcon="@mipmap/nusademyicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nusademy">
-        <activity android:name=".ui.chatbot4java.MainChatbot4Activity"></activity>
+        <activity android:name=".ui.narrationvideos.NarrationVideosActivity"></activity>
+        <activity android:name=".ui.signup.PostProfileTeacherActivity" />
+        <activity android:name=".ui.chatbot4java.MainChatbot4Activity" />
         <activity android:name=".ui.editteacher.EditTeacher2Activity" />
+        <activity android:name=".ui.applyguestteacher.GuestTeacherRequestActivity" />
+        <activity android:name=".ui.applytempteacher.TempTeacherRequestActivity" />
         <activity android:name=".ui.edituser.EditUserActivity" />
         <activity android:name=".ui.editteacher.EditTeacherActivity" />
         <activity android:name=".ui.signup.SignUpActivity" />
@@ -22,6 +26,9 @@
         <activity
             android:name=".ui.school_profil2.SchoolProfil2Activity"
             android:label="@string/title_activity_school_profil2" />
+        <activity
+            android:name=".ui.requestschool.RequestSchoolActivity"
+            android:label="Invite School" />
         <activity
             android:name="com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity"
             android:label="@string/title_activity_main_menu_teacher" />

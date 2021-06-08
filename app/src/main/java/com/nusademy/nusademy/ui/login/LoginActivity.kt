@@ -86,6 +86,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if(SharedPrefManager.getInstance(this).IsLogin){
+            Log.d("Role",SharedPrefManager.getInstance(this).Getuser.role)
             if(SharedPrefManager.getInstance(this).Getuser.role=="Teacher"){
                 val intent = Intent(applicationContext, MainMenuTeacherActivity::class.java)
                 startActivity(intent)
