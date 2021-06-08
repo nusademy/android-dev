@@ -89,5 +89,9 @@ class NarrationVideosActivity : AppCompatActivity() {
         super.onBackPressed()
         finish()
     }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 
 }

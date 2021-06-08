@@ -26,9 +26,13 @@ class EditUserActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEditUserBinding
 
+
     //Ambil id dan token dari SharedPreference
     private val token= SharedPrefManager.getInstance(this).Getuser.token
-    private val id= SharedPrefManager.getInstance(this).Getuser.id
+    private val iduser= SharedPrefManager.getInstance(this).Getuser.id
+    private val idteachre= SharedPrefManager.getInstance(this).Getuser.idteacher
+    private val fullname= SharedPrefManager.getInstance(this).Getuser.name
+    private val rolename= SharedPrefManager.getInstance(this).Getuser.role
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,7 +71,7 @@ class EditUserActivity : AppCompatActivity() {
         val pDialog = KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
         pDialog.contentText = "Updated data has been saved"
         pDialog.show()
-        RetrofitClient.instanceUserApi.editProfileUsers(id,"Bearer "+token,fullName,email)
+        RetrofitClient.instanceUserApi.editProfileUsers(iduser,"Bearer "+token,fullName,email)
             .enqueue(object : Callback<DataBasicUser> {
                 override fun onResponse(
                     call: Call<DataBasicUser>,
@@ -76,6 +80,14 @@ class EditUserActivity : AppCompatActivity() {
                     pDialog.hide()
                     if (response.isSuccessful) {
                         // Saat response sukses finnish activity (menutup/mengakhiri activity editprofile)
+                        SharedPrefManager.getInstance(applicationContext).setUser(
+                            iduser,
+                            idteachre,
+                            token,
+                            response.body()?.fullName.toString(),
+                            rolename
+                        )
+
                         finish()
                     } else {
                         Toast.makeText(applicationContext, "Gagal Cek kembali Isian", Toast.LENGTH_SHORT).show()

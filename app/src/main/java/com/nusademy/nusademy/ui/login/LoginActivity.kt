@@ -13,6 +13,7 @@ import com.nusademy.nusademy.databinding.ActivityLoginBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
 import com.nusademy.nusademy.ui.home.UserHomeActivity
+import com.nusademy.nusademy.ui.login_option.LoginOptionActivity
 import com.nusademy.nusademy.ui.signup.SignUpActivity
 import com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity
 import retrofit2.Call
@@ -30,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
         actionBar?.hide()
 
         binding.textView9.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, SignUpActivity ::class.java)
+            val intent = Intent(this, LoginOptionActivity ::class.java)
             startActivity(intent)
         })
 

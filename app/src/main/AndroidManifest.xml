@@ -24,6 +24,7 @@
         <activity android:name=".ui.edituser.EditUserActivity" />
         <activity android:name=".ui.editteacher.EditTeacherActivity" />
         <activity android:name=".ui.signup.SignUpActivity" />
+        <activity android:name=".ui.signup.SignUpUserActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.chatbot.ChatbotActivity" />
         <activity

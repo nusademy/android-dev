@@ -82,7 +82,7 @@
                 app:iss_period="1000" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/bt_narativevideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"

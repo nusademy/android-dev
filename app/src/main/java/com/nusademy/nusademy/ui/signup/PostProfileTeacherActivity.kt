@@ -86,7 +86,6 @@ class PostProfileTeacherActivity : AppCompatActivity() {
                     call: Call<DataTeacher>,
                     response: Response<DataTeacher>
                 ) {
-                    pDialog.hide()
                     Log.d("Post",response.toString())
                     if (response.isSuccessful) {
                         SharedPrefManager.getInstance(applicationContext).setUser(

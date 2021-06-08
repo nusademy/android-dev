@@ -89,6 +89,8 @@ class MainMenuTeacherActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, PostProfileTeacherActivity::class.java)
             startActivity(intent)
         }
+        binding.tvFullname.text= SharedPrefManager.getInstance(this).Getuser.name
+        binding.tvRole.text= SharedPrefManager.getInstance(this).Getuser.role
     }
 
 }

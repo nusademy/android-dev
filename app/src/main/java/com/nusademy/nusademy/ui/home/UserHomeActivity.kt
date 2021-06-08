@@ -14,6 +14,7 @@ import com.nusademy.nusademy.databinding.ActivityUserHomeBinding
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.nusademy.ui.about.AboutActivity
 import com.nusademy.nusademy.ui.chatbot4java.MainChatbot4Activity
+import com.nusademy.nusademy.ui.narrationvideos.NarrationVideosActivity
 import com.nusademy.nusademy.ui.profile.UserProfileActivity
 
 class UserHomeActivity : AppCompatActivity() {
@@ -36,6 +37,10 @@ class UserHomeActivity : AppCompatActivity() {
             val intent = Intent(this, MainChatbot4Activity ::class.java)
             startActivity(intent)
         })
+        binding.btNarativevideo.setOnClickListener {
+            val intent = Intent(this, NarrationVideosActivity ::class.java)
+            startActivity(intent)
+        }
 
         Glide.with(this)
             .load(R.drawable.profile_null)
@@ -57,10 +62,14 @@ class UserHomeActivity : AppCompatActivity() {
         binding.tvRole.text= SharedPrefManager.getInstance(this).Getuser.role
 
         binding.linearprofile.setOnClickListener(View.OnClickListener {
-
                 val intent = Intent(this, UserProfileActivity ::class.java)
-
             startActivity(intent)
         })
+    }
+
+    override fun onStart() {
+        super.onStart()
+        binding.tvFullname.text= SharedPrefManager.getInstance(this).Getuser.name
+        binding.tvRole.text= SharedPrefManager.getInstance(this).Getuser.role
     }
 }
