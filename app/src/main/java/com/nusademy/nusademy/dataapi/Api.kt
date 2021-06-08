@@ -44,6 +44,11 @@ interface Api {
         @Query("Status_contains") status: String,
     ): Call<ListdataTemporaryRequest>
 
+    @GET("narration-videos")
+    fun getVideoNarration(
+       @Header("Authorization") token: String
+    ): Call<ListDataVideos>
+
     // PUT ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @FormUrlEncoded

@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.narrationvideos.NarrationVideosActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_video_list" />
 </androidx.constraintlayout.widget.ConstraintLayout>

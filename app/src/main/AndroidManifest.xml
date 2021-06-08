@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/nusademyicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nusademy">
+        <activity android:name=".ui.narrationvideos.VideoPlayerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="sensorLandscape" />
         <activity android:name=".ui.narrationvideos.NarrationVideosActivity"></activity>
         <activity android:name=".ui.signup.PostProfileTeacherActivity" />
         <activity android:name=".ui.chatbot4java.MainChatbot4Activity" />
