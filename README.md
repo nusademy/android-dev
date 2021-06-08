@@ -32,15 +32,7 @@ git clone https://github.com/nusademy/android-dev.git
 4. Wait a few moments for the application to run successfully
 
 
-## CI/CD
 
-
-1. Before setting up CI/CD, first connect Cloud Build with Repository. Cloud Build -> Trigger -> Connect Repository.
-2. Create a Trigger for CI/CD, specify the repository, then in the substitution variables enter the following key (We have provided cloudbuild.yaml in the repository.):   
-```bash
-_BUCKET  =  example
-```
-3. Click Save, then Run Trigger.
 
 # END
 
