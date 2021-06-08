@@ -9,6 +9,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
+      - name: Download Importat file
+        run: wget ${{ secrets.API_JSON }} -q -O app/src/main/res/raw/testagentcredentials.json
       - name: Setup JDK 1.8
         uses: actions/setup-java@v1
         with:
@@ -45,6 +47,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Download Importat file
+        run: wget ${{ secrets.API_JSON }} -q -O app/src/main/res/raw/testagentcredentials.json
       - name: Generate apk
         run: ./gradlew assembleDebug
       - name: Upload APK
