@@ -114,7 +114,7 @@ class TeacherProfilActivity : AppCompatActivity() {
                     call: Call<DataTeacher>,
                     response: Response<DataTeacher>
                 ) {
-                    pDialog.hide()
+                    pDialog.dismissWithAnimation()
                     Log.d("Teacher", response.body().toString())
                     // Cek Koneksi API Behasil
                     if (response.code().toString() == "200") {

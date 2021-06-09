@@ -90,7 +90,7 @@
             <Button
                 android:id="@+id/narrationbookButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="20dp"
@@ -105,9 +105,9 @@
             <Button
                 android:id="@+id/passionidentifierButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
@@ -116,24 +116,11 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/schoolrecommendationButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/shape_background"
-                android:text="@string/schoolrecommendation_teacher"
-                android:textSize="14sp" />
-
-            <Button
                 android:id="@+id/bt_apply_guest"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
@@ -144,9 +131,9 @@
             <Button
                 android:id="@+id/bt_apply_temp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
@@ -155,24 +142,11 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/invitelistButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/shape_background"
-                android:text="@string/invitelist_teacher"
-                android:textSize="14sp" />
-
-            <Button
                 android:id="@+id/bt_searchschool"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"

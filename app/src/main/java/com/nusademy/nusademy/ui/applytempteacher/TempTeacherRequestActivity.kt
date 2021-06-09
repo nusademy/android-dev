@@ -36,7 +36,7 @@ class TempTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
 
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
-        actionBar?.setTitle("Temporary Teacher Request")
+        actionBar?.setTitle("Permintaan Guru Tetap")
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.setDisplayHomeAsUpEnabled(true)
 

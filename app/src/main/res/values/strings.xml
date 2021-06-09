@@ -30,8 +30,8 @@
     <string name="date_school">12 Mei 2021</string>
 
     //Main Menu Teacher
-    <string name="narrationbook_teacher">Narration Book</string>
-    <string name="passionidentifier_teacher">Passion Identifier</string>
+    <string name="narrationbook_teacher">Buku narasi</string>
+    <string name="passionidentifier_teacher">Identifikasi Passion</string>
     <string name="schoolrecommendation_teacher">School Recommendation</string>
     <string name="applyschool_teacher">Apply School</string>
     <string name="invitelist_teacher">Invite List</string>
@@ -100,8 +100,8 @@
     <string name="question_ready">Are you ready to determine your passion ?</string>
     <string name="yes_ready">Yes, I am Ready</string>
     <string name="title_activity_edit_user">EditUserActivity</string>
-    <string name="applyguestteacher">Apply Guest Teacher</string>
-    <string name="applytempteacher">Apply Temporary Teacher</string>
+    <string name="applyguestteacher">Permintaan Guru Tamu</string>
+    <string name="applytempteacher">Permintaan Guru Tetap</string>
     <string name="name_user">Name</string>
     <string name="email_user">Email</string>
     <string name="lasteducation_user">Last Education</string>

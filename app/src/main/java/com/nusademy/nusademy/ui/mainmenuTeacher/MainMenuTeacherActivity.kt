@@ -1,8 +1,11 @@
 package com.nusademy.ui.mainmenuTeacher
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.Window
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.denzcoskun.imageslider.ImageSlider
@@ -96,6 +99,32 @@ class MainMenuTeacherActivity : AppCompatActivity() {
         }
         binding.tvFullname.text= SharedPrefManager.getInstance(this).Getuser.name
         binding.tvRole.text= SharedPrefManager.getInstance(this).Getuser.role
+    }
+
+    override fun onBackPressed() {
+        initCloseDialog()
+    }
+
+    // Function Add Dialog -------------------------------------------------------------------------------------------
+    private fun initCloseDialog() {
+        val adddialog = Dialog(this)
+        adddialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        adddialog.setCancelable(true)
+        adddialog.setContentView(R.layout.dialog_close)
+        val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
+        adddialog.getWindow()?.setLayout(width, (width/1.5).toInt())
+
+        val btSave = adddialog.findViewById(R.id.bt_save) as Button
+        val btCancel = adddialog.findViewById(R.id.bt_cancel) as Button
+
+        btCancel.setOnClickListener {
+            adddialog.dismiss()
+        }
+        btSave.setOnClickListener {
+            adddialog.dismiss()
+            finishAffinity()
+        }
+        adddialog.show()
     }
 
 }

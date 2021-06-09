@@ -108,18 +108,6 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/bt_passion" />
 
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:foreground="?android:attr/selectableItemBackgroundBorderless"
-                android:scaleType="fitCenter"
-                android:src="@drawable/bt_donation" />
         </LinearLayout>
     </ScrollView>
 

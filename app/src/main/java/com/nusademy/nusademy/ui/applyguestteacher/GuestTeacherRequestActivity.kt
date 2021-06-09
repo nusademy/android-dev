@@ -37,7 +37,7 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
 
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
-        actionBar?.setTitle("Guest Teacher Request")
+        actionBar?.setTitle("Permintaan Guru Tamu")
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.setDisplayHomeAsUpEnabled(true)
         GetListApply("Requested")
