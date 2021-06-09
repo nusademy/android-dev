@@ -13,7 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="450dp"
-        app:srcCompat="@drawable/ic_group_106" />
+        app:srcCompat="@drawable/ic_group_120" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,31 +33,81 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_avatar_user"
             android:layout_width="100dp"
+            android:layout_marginTop="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             tools:src="@drawable/profile_null" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/name_user_profil"
-            android:layout_marginTop="40dp"
-            android:layout_marginHorizontal="170dp"
+        <TextView
+            android:id="@+id/tv_name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/name_user"
+            android:textColor="@color/primarydark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar_user"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
             android:text="@string/name_teacher_profil"
             android:textColor="@color/black"
-            android:layout_width="193dp"
-            android:layout_height="22dp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/email_user_profil"
-            android:layout_width="222dp"
-            android:textStyle="bold"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="170dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start"
+            android:maxLines="10"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_overview_title_films"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview_title_films" />
+
+        <TextView
+            android:id="@+id/tv_email_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/email_user"
+            android:textColor="@color/primarydark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_user_email"
+            android:textStyle="bold"
             android:text="@string/email_teacher_profil"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="2"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_email_user"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email_user" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_changeprofil"

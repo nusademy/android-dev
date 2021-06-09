@@ -53,8 +53,8 @@ class TeacherProfilActivity : AppCompatActivity() {
 
                 val bundle = Bundle()
                 //get id2
-                bundle.putString("fullName", binding.nameTeacherProfil.text.toString())
-                bundle.putString("email", binding.emailTeacherProfil.text.toString())
+                bundle.putString("fullName", binding.tvUserName.text.toString())
+                bundle.putString("email", binding.tvUserEmail.text.toString())
 
                 val intent = Intent(this, EditTeacher2Activity::class.java)
                 intent.putExtras(bundle)
@@ -124,8 +124,8 @@ class TeacherProfilActivity : AppCompatActivity() {
 
                         //Set data JSON ke tampilan
                         val data = response.body()
-                        binding.nameTeacherProfil.text = data?.user?.fullName
-                        binding.emailTeacherProfil.text = data?.user?.email
+                        binding.tvUserName.text = data?.user?.fullName
+                        binding.tvUserEmail.text = data?.user?.email
                         //
                         binding.lasteducationTeacherProfil.text = data?.lastEducation
                         binding.campusTeacherProfil.text = data?.campus
