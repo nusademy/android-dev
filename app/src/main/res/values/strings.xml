@@ -102,5 +102,14 @@
     <string name="title_activity_edit_user">EditUserActivity</string>
     <string name="applyguestteacher">Apply Guest Teacher</string>
     <string name="applytempteacher">Apply Temporary Teacher</string>
+    <string name="name_user">Name</string>
+    <string name="email_user">Email</string>
+    <string name="lasteducation_user">Last Education</string>
+    <string name="campus_user">Campus</string>
+    <string name="major_user">Major</string>
+    <string name="gpa_user">GPA</string>
+    <string name="shortbrief_user">Short Branding</string>
+    <string name="linkedin_user">LinkedIn</string>
+    <string name="youtube_user">Video Branding</string>
 
 </resources>

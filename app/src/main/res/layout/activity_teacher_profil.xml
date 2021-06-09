@@ -10,11 +10,10 @@
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="275dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_group_118" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="450dp"
+        app:srcCompat="@drawable/ic_group_120" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,108 +40,315 @@
                 android:layout_gravity="center"
                 tools:src="@drawable/profile_null" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/name_teacher_profil"
-                android:layout_width="193dp"
-                android:layout_height="22dp"
-                android:layout_marginHorizontal="160dp"
+            <TextView
+                android:id="@+id/tv_name_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/name_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_avatar_user"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 android:layout_marginTop="5dp"
                 android:text="@string/name_teacher_profil"
                 android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="start"
+                android:maxLines="10"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_overview_title_films"
+                app:layout_constraintTop_toBottomOf="@+id/tv_overview_title_films" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/email_teacher_profil"
-                android:layout_width="149dp"
-                android:layout_height="15dp"
-                android:layout_marginHorizontal="160dp"
-                android:layout_marginTop="7dp"
+            <TextView
+                android:id="@+id/tv_email_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/email_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_user_email"
+                android:textStyle="bold"
                 android:text="@string/email_teacher_profil"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/lasteducation_teacher_profil"
-                android:layout_width="222dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="160dp"
-                android:layout_marginTop="17dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_user"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_user" />
+
+            <TextView
+                android:id="@+id/tv_lasteducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/lasteducation_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_email"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/lasteducation_teacher_profil"
+                android:textStyle="bold"
                 android:text="@string/lasteducation_teacher_profil"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/campus_teacher_profil"
-                android:layout_width="222dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="160dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_lasteducation"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lasteducation" />
+
+            <TextView
+                android:id="@+id/tv_campus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/campus_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lasteducation_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/campus_teacher_profil"
+                android:textStyle="bold"
                 android:text="@string/campus_teacher"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/major_teacher_profil"
-                android:layout_width="222dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="160dp"
-                android:layout_marginTop="11dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_campus"
+                app:layout_constraintTop_toBottomOf="@+id/tv_campus" />
+
+            <TextView
+                android:id="@+id/tv_major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/major_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campus_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/major_teacher_profil"
+                android:textStyle="bold"
                 android:text="@string/major_teacher"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/ipk_teacher_profil"
-                android:layout_width="222dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="160dp"
-                android:layout_marginTop="11dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_major"
+                app:layout_constraintTop_toBottomOf="@+id/tv_major" />
+
+            <TextView
+                android:id="@+id/tv_ipk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/gpa_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/major_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/ipk_teacher_profil"
+                android:textStyle="bold"
                 android:text="@string/ipk_teacher"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/shortbrief_teacher_profil"
-                android:layout_width="222dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="130dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_ipk"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ipk" />
+
+            <TextView
+                android:id="@+id/tv_shortbrief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/shortbrief_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ipk_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/shortbrief_teacher_profil"
+                android:textStyle="bold"
                 android:text="@string/shortbrief_teacher"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/linkedin_teacher_profil"
-                android:layout_width="222dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="80dp"
-                android:layout_marginTop="24.5dp"
-                android:autoLink="web"
-                android:singleLine="true"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_shortbrief"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shortbrief" />
+
+            <TextView
+                android:id="@+id/tv_linkedin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/linkedin_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shortbrief_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/linkedin_teacher_profil"
+                android:textStyle="bold"
                 android:text="@string/linkedin_teacher_profil"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/videobranding_teacher_profil"
-                android:layout_width="222dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="80dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
                 android:autoLink="web"
-                android:singleLine="true"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_linkedin"
+                app:layout_constraintTop_toBottomOf="@+id/tv_linkedin" />
+
+            <TextView
+                android:id="@+id/tv_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/youtube_user"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linkedin_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/videobranding_teacher_profil"
+                android:textStyle="bold"
                 android:text="@string/videobranding_teacher"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:autoLink="web"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_youtube"
+                app:layout_constraintTop_toBottomOf="@+id/tv_youtube" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_changeprofil"

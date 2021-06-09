@@ -60,8 +60,8 @@ class UserProfileActivity : AppCompatActivity() {
                 View.OnClickListener {
                     GetUserProfile(id,token)
                     val bundle = Bundle()
-                    bundle.putString("full_name", binding.nameUserProfil.text.toString())
-                    bundle.putString("email", binding.emailUserProfil.text.toString())
+                    bundle.putString("full_name", binding.tvUserName.text.toString())
+                    bundle.putString("email", binding.tvUserEmail.text.toString())
 
                     val intent = Intent(this, EditUserActivity::class.java)
                     intent.putExtras(bundle)
@@ -104,8 +104,8 @@ class UserProfileActivity : AppCompatActivity() {
 
                             //Set data JSON ke tampilan
                             val data = response.body()
-                            binding.nameUserProfil.text = data?.fullName
-                            binding.emailUserProfil.text = data?.email
+                            binding.tvUserName.text = data?.fullName
+                            binding.tvUserEmail.text = data?.email
 
                             // Cek Koneksi API Gagal
                         } else {
