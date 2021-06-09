@@ -139,7 +139,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autoLink="web"
                 android:text="-"
+                android:textColor="?attr/colorControlActivated"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -158,17 +160,18 @@
 
         <Button
             android:id="@+id/bt_cancel"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="0.5"
+            android:layout_weight="0.45"
+            android:backgroundTint="@color/primarydark"
             android:insetBottom="0dp"
             android:text="Batal" />
 
         <Button
             android:id="@+id/bt_invite"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="0.5"
+            android:layout_weight="0.55"
             android:insetBottom="0dp"
             android:text="Ajukan Permohonan" />
     </LinearLayout>

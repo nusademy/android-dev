@@ -41,6 +41,8 @@ class RequestSchoolActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRequestSchoolBinding
     val token= SharedPrefManager.getInstance(this).Getuser.token
     val idteacher= SharedPrefManager.getInstance(this).Getuser.idteacher
+    val iduser= SharedPrefManager.getInstance(this).Getuser.id
+    var generic=true
     private val list = MutableLiveData<ArrayList<ListDataClassesItem>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +68,7 @@ class RequestSchoolActivity : AppCompatActivity() {
                 }
             })
 
-            if(binding.menuAutocomplete.text.toString()!=""||binding.menuAutocomplete.text.toString()!=null){
+            if(generic==false){
                 ADDGuestRequest(
                     binding.editGsName.text.toString(),
                     binding.editGsDesc.text.toString(),
@@ -74,7 +76,7 @@ class RequestSchoolActivity : AppCompatActivity() {
                     binding.editGsTimeStart.text.toString(),
                     binding.editGsTimeEnd.text.toString(),
                     binding.editGsNote.text.toString(),
-                    idteacher,
+                    iduser,
                     idschool,
                     idclass,
                     "Specific",
@@ -89,13 +91,14 @@ class RequestSchoolActivity : AppCompatActivity() {
                     binding.editGsTimeStart.text.toString(),
                     binding.editGsTimeEnd.text.toString(),
                     binding.editGsNote.text.toString(),
-                    idteacher,
+                    iduser,
                     idschool,
                     null,
                     "General",
                     "Requested",
                     "Teacher"
                 )
+                Log.d("subject","CEK -$idclass")
             }
 
 
@@ -118,7 +121,7 @@ class RequestSchoolActivity : AppCompatActivity() {
                 binding.editTmDuration.text.toString(),
                 dateteaching2,
                 idclass2,
-                idteacher,
+                iduser,
                 idschool,
                 "Requested",
                 "Teacher"
@@ -136,10 +139,17 @@ class RequestSchoolActivity : AppCompatActivity() {
         binding.toggleButtonGroup2.addOnButtonCheckedListener { toggleButtonGroup, checkedId, isChecked ->
             if (isChecked) {
                 when (checkedId) {
-                    R.id.bt_gs_generic ->binding.dropdownkelas.isVisible=false
-                    R.id.bt_gs_specific -> binding.dropdownkelas.isVisible=true
+                    R.id.bt_gs_generic ->{
+                        binding.dropdownkelas.isVisible=false
+                        generic=true
+                    }
+                    R.id.bt_gs_specific ->{
+                        binding.dropdownkelas.isVisible=true
+                        generic=false
+                    }
                 }
             } else {
+
             }
         }
         binding.toggleButtonGroup.check(R.id.bt_guest)

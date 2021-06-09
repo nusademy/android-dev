@@ -29,6 +29,7 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
     private lateinit var dataAdapter: GuestTeacherRequestAdapter
     val token = SharedPrefManager.getInstance(this).Getuser.token
     val idteacher = SharedPrefManager.getInstance(this).Getuser.idteacher
+    val iduser = SharedPrefManager.getInstance(this).Getuser.id
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -128,7 +129,7 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
 
     // Get List Data From API ----------------------------------------------------------------------------------------
     fun GetListApply(status:String) {
-        setItems(idteacher, token,status)
+        setItems(iduser,token,status)
         getItems().observe(this, {
             if (it != null) {
                 dataAdapter.setDataItem(it)
@@ -142,7 +143,7 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
         pDialog.titleText = "Loading"
         pDialog.setCancelable(false)
         pDialog.show()
-        RetrofitClient.instanceUserApi.getGuestRequest("Bearer " + token, "School", idteacher, status)
+        RetrofitClient.instanceUserApi.getGuestRequest("Bearer " + token, "School", id, status)
             .enqueue(object : Callback<ListDataGuestRequest> {
                 override fun onResponse(call: Call<ListDataGuestRequest>, response: Response<ListDataGuestRequest>) {
                     Log.d("JSON", response.toString())
@@ -208,6 +209,10 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
                     pDialog.dismissWithAnimation()
                 }
             })
+    }
+    override fun onResume() {
+        super.onResume()
+        GetListApply("Requested")
     }
 }
 

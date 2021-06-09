@@ -34,22 +34,35 @@ interface Api {
     fun getGuestRequest(
         @Header("Authorization") token: String,
         @Query("CreatedBy_contains") createdby: String,
-        @Query("school.id_contains") idschool: String,
+        @Query("top_talent.id_contains") iduser: String,
         @Query("Status_contains") status: String,
     ): Call<ListDataGuestRequest>
+
+    @GET("guest-teacher-requests/{id}")
+    fun getDetailGuestRequest(
+        @Header("Authorization") token: String,
+        @Path("id") idguest:String
+    ): Call<ListDataGuestRequestItem>
 
     @GET("temporary-teacher-requests")
     fun getTempRequest(
         @Header("Authorization") token: String,
         @Query("CreatedBy_contains") createdby: String,
-        @Query("school.id_contains") idschool: String,
+        @Query("teacher.id_contains") iduser: String,
         @Query("Status_contains") status: String,
     ): Call<ListdataTemporaryRequest>
+
+    @GET("temporary-teacher-requests/{id}")
+    fun getDetailTempRequest(
+        @Header("Authorization") token: String,
+        @Path("id") idtemp:String
+    ): Call<ListdataTemporaryRequestItem>
 
     @GET("narration-videos")
     fun getVideoNarration(
        @Header("Authorization") token: String
     ): Call<ListDataVideos>
+
 
     @GET("schools")
     fun getSearchSchool(
@@ -164,7 +177,7 @@ interface Api {
         @Field("time_start") timestart: String?,
         @Field("time_finished") timeend: String?,
         @Field("Notes") notes: String?,
-        @Field("top_talent") idteacher: String?,
+        @Field("top_talent") iduser: String?,
         @Field("school") idschool: String?,
         @Field("class") idclass: String?,
         @Field("target_audience") target: String?,
@@ -180,7 +193,7 @@ interface Api {
         @Field("durations") durations: String?,
         @Field("expectations_start_teaching") dateteach: String?,
         @Field("class") idclass: String?,
-        @Field("teacher") idteacher: String?,
+        @Field("teacher") iduser: String?,
         @Field("school") idschool: String?,
         @Field("Status") status: String?,
         @Field("CreatedBy") createdby: String?,

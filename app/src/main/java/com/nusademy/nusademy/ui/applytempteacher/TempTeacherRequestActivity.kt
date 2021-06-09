@@ -28,6 +28,7 @@ class TempTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
     private lateinit var dataAdapter: TempTeacherRequestAdapter
     val token = SharedPrefManager.getInstance(this).Getuser.token
     val idteacher = SharedPrefManager.getInstance(this).Getuser.idteacher
+    val iduser = SharedPrefManager.getInstance(this).Getuser.id
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -128,7 +129,7 @@ class TempTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
 
     // Get List Data From API ----------------------------------------------------------------------------------------
     fun GetListApply(status:String) {
-        setItems(idteacher, token,status)
+        setItems(iduser, token,status)
         getItems().observe(this, {
             if (it != null) {
                 dataAdapter.setDataItem(it)
@@ -142,7 +143,7 @@ class TempTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
         pDialog.titleText = "Loading"
         pDialog.setCancelable(false)
         pDialog.show()
-        RetrofitClient.instanceUserApi.getTempRequest("Bearer " + token, "School", idteacher, status)
+        RetrofitClient.instanceUserApi.getTempRequest("Bearer " + token, "School", id, status)
             .enqueue(object : Callback<ListdataTemporaryRequest> {
                 override fun onResponse(call: Call<ListdataTemporaryRequest>, response: Response<ListdataTemporaryRequest>) {
                     Log.d("JSON", response.toString())
