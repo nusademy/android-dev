@@ -16,6 +16,7 @@ import com.nusademy.nusademy.ui.applyguestteacher.GuestTeacherRequestActivity
 import com.nusademy.nusademy.ui.applytempteacher.TempTeacherRequestActivity
 import com.nusademy.nusademy.ui.chatbot4java.MainChatbot4Activity
 import com.nusademy.nusademy.ui.narrationvideos.NarrationVideosActivity
+import com.nusademy.nusademy.ui.searchschool.SearchSchoolActivity
 import com.nusademy.nusademy.ui.signup.PostProfileTeacherActivity
 import com.nusademy.nusademy.ui.teacher_profil.TeacherProfilActivity
 
@@ -53,6 +54,10 @@ class MainMenuTeacherActivity : AppCompatActivity() {
         }
         binding.narrationbookButton.setOnClickListener {
             val intent = Intent(this, NarrationVideosActivity ::class.java)
+            startActivity(intent)
+        }
+        binding.btSearchschool.setOnClickListener {
+            val intent = Intent(this, SearchSchoolActivity ::class.java)
             startActivity(intent)
         }
 

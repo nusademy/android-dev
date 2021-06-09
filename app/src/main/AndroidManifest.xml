@@ -23,6 +23,8 @@
         <activity android:name=".ui.applytempteacher.TempTeacherRequestActivity" />
         <activity android:name=".ui.edituser.EditUserActivity" />
         <activity android:name=".ui.editteacher.EditTeacherActivity" />
+        <activity android:name=".ui.searchschool.SearchSchoolActivity" />
+        <activity android:name=".ui.searchschool.DetailSchoolActivity" />
         <activity android:name=".ui.signup.SignUpActivity" />
         <activity android:name=".ui.signup.SignUpUserActivity" />
         <activity android:name=".ui.login.LoginActivity" />

@@ -47,40 +47,63 @@ class RequestSchoolActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRequestSchoolBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
+        actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
+        actionBar?.setTitle("Permohonan Mengajar")
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayHomeAsUpEnabled(true)
 //        idschool = intent.getStringExtra("idschool").toString()
-        idschool = "1"
+        idschool = intent.getStringExtra("idschool").toString()
+        GetListClass()
         binding.btSendGuest.setOnClickListener {
             getItems().observe(this, {
                 if (it != null) {
-                    listclasses.clear()
                     it.forEachIndexed { index, listDataClassesItem ->
                         if (binding.menuAutocomplete.text.toString()==listDataClassesItem.name){
                             idclass=listDataClassesItem.id.toString()
                         }
-
                     }
                 }
             })
 
-            ADDGuestRequest(
-                binding.editGsName.text.toString(),
-                binding.editGsDesc.text.toString(),
-                dateteaching,
-                binding.editGsTimeStart.text.toString(),
-                binding.editGsTimeEnd.text.toString(),
-                binding.editGsNote.text.toString(),
-                idteacher,
-                idschool,
-                idclass,
-                "Specific",
-                "Requested",
-                "Teacher"
-            )
+            if(binding.menuAutocomplete.text.toString()!=""||binding.menuAutocomplete.text.toString()!=null){
+                ADDGuestRequest(
+                    binding.editGsName.text.toString(),
+                    binding.editGsDesc.text.toString(),
+                    dateteaching,
+                    binding.editGsTimeStart.text.toString(),
+                    binding.editGsTimeEnd.text.toString(),
+                    binding.editGsNote.text.toString(),
+                    idteacher,
+                    idschool,
+                    idclass,
+                    "Specific",
+                    "Requested",
+                    "Teacher"
+                )
+            } else {
+                ADDGuestRequest(
+                    binding.editGsName.text.toString(),
+                    binding.editGsDesc.text.toString(),
+                    dateteaching,
+                    binding.editGsTimeStart.text.toString(),
+                    binding.editGsTimeEnd.text.toString(),
+                    binding.editGsNote.text.toString(),
+                    idteacher,
+                    idschool,
+                    null,
+                    "General",
+                    "Requested",
+                    "Teacher"
+                )
+            }
+
+
+
        }
         binding.btSendTemp.setOnClickListener {
             getItems().observe(this, {
                 if (it != null) {
-                    listclasses.clear()
                     it.forEachIndexed { index, listDataClassesItem ->
                         if (binding.menuAutocomplete2.text.toString()==listDataClassesItem.name){
                             idclass2=listDataClassesItem.id.toString()
@@ -119,7 +142,6 @@ class RequestSchoolActivity : AppCompatActivity() {
             } else {
             }
         }
-
         binding.toggleButtonGroup.check(R.id.bt_guest)
         binding.toggleButtonGroup.addOnButtonCheckedListener { toggleButtonGroup, checkedId, isChecked ->
             if (isChecked) {
@@ -137,7 +159,7 @@ class RequestSchoolActivity : AppCompatActivity() {
             }
         }
 
-        GetListClass()
+
 
 
         val adapter = ArrayAdapter(this, layout.list_item, listclasses)
@@ -155,7 +177,7 @@ class RequestSchoolActivity : AppCompatActivity() {
 
         val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
             // Display Selected date in Toast
-            binding.editTmDate.setText("${twodigit((dayOfMonth).toString())}-${twodigit((monthOfYear + 1).toString())}-$year")
+            binding.editGsDate.setText("${twodigit((dayOfMonth).toString())}-${twodigit((monthOfYear + 1).toString())}-$year")
             dateteaching="$year-${twodigit((monthOfYear + 1).toString())}-${twodigit((dayOfMonth).toString())}"
         }, year, month, day)
         dpd.show()
@@ -258,7 +280,7 @@ class RequestSchoolActivity : AppCompatActivity() {
         notes: String,
         idteacher: String,
         idschool: String,
-        idclass: String,
+        idclass: String?,
         target: String,
         status: String,
         createdby:String,) {
@@ -371,7 +393,10 @@ class RequestSchoolActivity : AppCompatActivity() {
                 }
             })
     }
-
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 
 
 }

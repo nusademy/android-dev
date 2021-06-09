@@ -16,6 +16,8 @@ interface Api {
         @Path("id") id: String,@Header("Authorization") token: String
     ): Call<DataTeacher>
 
+
+
     @GET("users/{id}")
     fun getProfileBasicUser(
         @Path("id") id: String,@Header("Authorization") token: String
@@ -48,6 +50,16 @@ interface Api {
     fun getVideoNarration(
        @Header("Authorization") token: String
     ): Call<ListDataVideos>
+
+    @GET("schools")
+    fun getSearchSchool(
+        @Query("name_contains") name: String,@Header("Authorization") token: String
+    ): Call<ListDataSchool>
+
+    @GET("schools/{id}")
+    fun getProfileSchool(
+        @Path("id") id: String,@Header("Authorization") token: String
+    ): Call<DataProfileSchool>
 
     // PUT ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 

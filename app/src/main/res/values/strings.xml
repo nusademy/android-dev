@@ -102,5 +102,7 @@
     <string name="title_activity_edit_user">EditUserActivity</string>
     <string name="applyguestteacher">Apply Guest Teacher</string>
     <string name="applytempteacher">Apply Temporary Teacher</string>
+    <string name="address">Senden Klaten</string>
+    <string name="searchschool">Cari Sekolah</string>
 
 </resources>

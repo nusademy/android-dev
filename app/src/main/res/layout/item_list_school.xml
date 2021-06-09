@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constraintlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@drawable/bg_list_item"
+    android:padding="16dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar_school"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:paddingEnd="16dp"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/profile_null" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_name_school"
+        style="@style/tv.large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_school"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar_school"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="24dp"
+        tools:layout_conversion_absoluteWidth="67dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_web"
+        style="@style/tv.medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/website_school_profil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar_school"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_school"
+        tools:layout_conversion_absoluteHeight="21dp"
+        tools:layout_conversion_absoluteWidth="196dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_address"
+        style="@style/tv.small"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:fontFamily="sans-serif-light"
+        android:src="@drawable/shape_background"
+        android:text="@string/address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar_school"
+        app:layout_constraintTop_toBottomOf="@+id/txt_web"
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="78dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
