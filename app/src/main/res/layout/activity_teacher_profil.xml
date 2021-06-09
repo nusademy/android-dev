@@ -17,7 +17,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,18 +63,18 @@
 
             <TextView
                 android:id="@+id/tv_user_name"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:text="@string/name_teacher_profil"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:gravity="start"
                 android:maxLines="10"
+                android:text="@string/name_teacher_profil"
                 android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/tv_overview_title_films"
@@ -95,17 +99,17 @@
 
             <TextView
                 android:id="@+id/tv_user_email"
-                android:textStyle="bold"
-                android:text="@string/email_teacher_profil"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:maxLines="2"
+                android:text="@string/email_teacher_profil"
                 android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_email_user"
                 app:layout_constraintTop_toBottomOf="@+id/tv_email_user" />
@@ -129,17 +133,17 @@
 
             <TextView
                 android:id="@+id/lasteducation_teacher_profil"
-                android:textStyle="bold"
-                android:text="@string/lasteducation_teacher_profil"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:maxLines="2"
+                android:text="@string/lasteducation_teacher_profil"
                 android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_lasteducation"
                 app:layout_constraintTop_toBottomOf="@+id/tv_lasteducation" />
@@ -163,17 +167,17 @@
 
             <TextView
                 android:id="@+id/campus_teacher_profil"
-                android:textStyle="bold"
-                android:text="@string/campus_teacher"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:maxLines="2"
+                android:text="@string/campus_teacher"
                 android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_campus"
                 app:layout_constraintTop_toBottomOf="@+id/tv_campus" />
@@ -197,17 +201,17 @@
 
             <TextView
                 android:id="@+id/major_teacher_profil"
-                android:textStyle="bold"
-                android:text="@string/major_teacher"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:maxLines="2"
+                android:text="@string/major_teacher"
                 android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_major"
                 app:layout_constraintTop_toBottomOf="@+id/tv_major" />
@@ -231,17 +235,17 @@
 
             <TextView
                 android:id="@+id/ipk_teacher_profil"
-                android:textStyle="bold"
-                android:text="@string/ipk_teacher"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:maxLines="2"
+                android:text="@string/ipk_teacher"
                 android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_ipk"
                 app:layout_constraintTop_toBottomOf="@+id/tv_ipk" />
@@ -265,17 +269,17 @@
 
             <TextView
                 android:id="@+id/shortbrief_teacher_profil"
-                android:textStyle="bold"
-                android:text="@string/shortbrief_teacher"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:maxLines="2"
+                android:text="@string/shortbrief_teacher"
                 android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_shortbrief"
                 app:layout_constraintTop_toBottomOf="@+id/tv_shortbrief" />
@@ -299,18 +303,18 @@
 
             <TextView
                 android:id="@+id/linkedin_teacher_profil"
-                android:textStyle="bold"
-                android:text="@string/linkedin_teacher_profil"
-                android:textColor="@color/blue"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
-                android:maxLines="2"
                 android:autoLink="web"
+                android:maxLines="2"
+                android:text="@string/linkedin_teacher_profil"
                 android:textAlignment="textStart"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_linkedin"
                 app:layout_constraintTop_toBottomOf="@+id/tv_linkedin" />
@@ -334,18 +338,18 @@
 
             <TextView
                 android:id="@+id/videobranding_teacher_profil"
-                android:textStyle="bold"
-                android:text="@string/videobranding_teacher"
-                android:textColor="@color/blue"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
-                android:maxLines="2"
                 android:autoLink="web"
+                android:maxLines="2"
+                android:text="@string/videobranding_teacher"
                 android:textAlignment="textStart"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_youtube"
                 app:layout_constraintTop_toBottomOf="@+id/tv_youtube" />
@@ -380,6 +384,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/white"
                 android:cropToPadding="false"
                 android:src="@drawable/shape_background"
@@ -387,15 +392,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/primary"
                 android:textSize="14sp" />
-
-            <ImageView
-                android:id="@+id/logo_logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="85dp"
-                android:layout_marginTop="688dp"
-                app:srcCompat="@drawable/ic_logout"
-                tools:ignore="ContentDescription" />
 
         </LinearLayout>
     </ScrollView>
