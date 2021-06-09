@@ -30,6 +30,11 @@ interface Api {
         @Header("Authorization") token: String
     ): Call<ListDataClasses>
 
+    @GET("spesialitations")
+    fun getSpecialization(
+        @Header("Authorization") token: String
+    ): Call<ListDataSpecialization>
+
     @GET("guest-teacher-requests")
     fun getGuestRequest(
         @Header("Authorization") token: String,
@@ -85,6 +90,7 @@ interface Api {
         @Field("campus") campus: String?,
         @Field("major") major: String?,
         @Field("ipk") ipk: String?,
+        @Field("spesialitation") specialization: String?,
         @Field("short_brief") brief: String?,
         @Field("video_branding") videoBranding: String?,
         @Field("linkedin") linkedin: String?,
@@ -160,6 +166,7 @@ interface Api {
         @Field("campus") campus: String?,
         @Field("major") major: String?,
         @Field("ipk") ipk: String?,
+        @Field("spesialitation") specialization: String?,
         @Field("short_brief") brief: String?,
         @Field("video_branding") videoBranding: String?,
         @Field("linkedin") linkedin: String?,

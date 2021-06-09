@@ -113,5 +113,7 @@
     <string name="youtube_user">Video Branding</string>
     <string name="address">Senden Klaten</string>
     <string name="searchschool">Cari Sekolah</string>
+    <string name="specialication">Spesialisasi</string>
+    <string name="spe_user">Spesialisasi</string>
 
 </resources>

@@ -31,6 +31,7 @@ class TeacherProfilActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTeacherProfilBinding
     private val token = SharedPrefManager.getInstance(this).Getuser.token
     private val id = SharedPrefManager.getInstance(this).Getuser.idteacher
+    var Special_id=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +76,8 @@ class TeacherProfilActivity : AppCompatActivity() {
                 bundle.putString("short_brief", binding.shortbriefTeacherProfil.text.toString())
                 bundle.putString("linkedin", binding.linkedinTeacherProfil.text.toString())
                 bundle.putString("video_branding", binding.videobrandingTeacherProfil.text.toString())
+                bundle.putString("Specialication", binding.tvTeacherSpecialication.text.toString())
+                bundle.putString("Special_id",Special_id)
 
 
                 val intent = Intent(this, EditTeacherActivity::class.java)
@@ -134,6 +137,8 @@ class TeacherProfilActivity : AppCompatActivity() {
                         binding.shortbriefTeacherProfil.text = data?.shortBrief
                         binding.linkedinTeacherProfil.text = data?.linkedin
                         binding.videobrandingTeacherProfil.text = data?.videoBranding.toString()
+                        binding.tvTeacherSpecialication.text=data?.spesialitation?.name.toString()
+                        Special_id=data?.spesialitation?.id.toString()
 
 
                         // Cek Koneksi API Gagal

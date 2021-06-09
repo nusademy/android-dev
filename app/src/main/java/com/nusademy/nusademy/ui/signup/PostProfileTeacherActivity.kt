@@ -1,13 +1,19 @@
 package com.nusademy.nusademy.ui.signup
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.developer.kalert.KAlertDialog
+import com.nusademy.nusademy.R
 import com.nusademy.nusademy.dataapi.DataTeacher
+import com.nusademy.nusademy.dataapi.ListDataSpecialization
 import com.nusademy.nusademy.dataapi.RetrofitClient
 import com.nusademy.nusademy.databinding.ActivityEditTeacherBinding
 import com.nusademy.nusademy.databinding.ActivityPostProfileTeacherBinding
@@ -25,6 +31,9 @@ class PostProfileTeacherActivity : AppCompatActivity() {
     private val iduser= SharedPrefManager.getInstance(this).Getuser.id
     private val fullname= SharedPrefManager.getInstance(this).Getuser.name
     private val rolename= SharedPrefManager.getInstance(this).Getuser.role
+    private val list = MutableLiveData<ArrayList<ListDataSpecialization.ListDataSpecializationItem>>()
+    var idspecialization=""
+    var listspecialization= mutableListOf("")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +43,23 @@ class PostProfileTeacherActivity : AppCompatActivity() {
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
 
+        GetListSpecialization()
+        val adapter = ArrayAdapter(this, R.layout.list_item, listspecialization)
+        binding.menuAutocomplete.setAdapter(adapter)
+
 
 //         Action Saat Button Save Di Klik
-        binding.btSave.setOnClickListener(View.OnClickListener {
-
+        binding.btSave.setOnClickListener{
+            getItems().observe(this, {
+                if (it != null) {
+                    listspecialization.clear()
+                    it.forEachIndexed { index, listDataSpezializationItem ->
+                        if (binding.menuAutocomplete.text.toString()==listDataSpezializationItem.name){
+                            idspecialization=listDataSpezializationItem.id.toString()
+                        }
+                    }
+                }
+            })
             // Memanggil Function UpdateSchool
             UpdateTeacher(
                 binding.tvLasteducation.text.toString(),
@@ -48,7 +70,7 @@ class PostProfileTeacherActivity : AppCompatActivity() {
                 binding.tvVideobranding.text.toString(),
                 binding.tvLinkedin.text.toString()
             )
-        })
+        }
 
         binding.btnback.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, TeacherProfilActivity::class.java)
@@ -78,6 +100,7 @@ class PostProfileTeacherActivity : AppCompatActivity() {
             campus,
             major,
             ipk,
+            idspecialization,
             brief,
             videoBranding,
             linkedin,"1",iduser)
@@ -114,5 +137,41 @@ class PostProfileTeacherActivity : AppCompatActivity() {
 
                 }
             })
+    }
+
+    // Get List Class From API ----------------------------------------------------------------------------------------
+    fun GetListSpecialization(){
+        setItems(token)
+        getItems().observe(this, {
+            if (it != null) {
+                listspecialization.clear()
+                it.forEachIndexed { index, listDataClassesItem ->listspecialization.add(listDataClassesItem.name)}
+            }
+        })
+    }
+    fun setItems(token: String) {
+        val pDialog = KAlertDialog(this, KAlertDialog.PROGRESS_TYPE)
+        pDialog.progressHelper.barColor = Color.parseColor("#A5DC86")
+        pDialog.titleText = "Loading"
+        pDialog.setCancelable(false)
+        pDialog.show()
+        RetrofitClient.instanceUserApi.getSpecialization("Bearer " + token)
+            .enqueue(object : Callback<ListDataSpecialization> {
+                override fun onResponse(call: Call<ListDataSpecialization>, response: Response<ListDataSpecialization>) {
+                    Log.d("JSON", response.toString())
+                    if (response.isSuccessful) {
+                        list.postValue(response.body())
+                        pDialog.dismissWithAnimation()
+                    }
+                }
+
+                override fun onFailure(call: Call<ListDataSpecialization>, t: Throwable) {
+                    Log.d("onFailure", t.message.toString())
+                    pDialog.dismissWithAnimation()
+                }
+            })
+    }
+    fun getItems(): LiveData<ArrayList<ListDataSpecialization.ListDataSpecializationItem>> {
+        return list
     }
 }
